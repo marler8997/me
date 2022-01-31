@@ -21,11 +21,15 @@ body {
   margin:30px auto;
   width:700px;
 }
-.TableStyle1 table {
- border-collapse: collapse;
+.TableStyle1 {
+    padding: 10px;
+}
+.TableStyle1 th {
+    text-align:left;
 }
 .TableStyle1 tr, .TableStyle1 td {
- /*border:1px solid black;*/
+    /*border:1px solid black;*/
+    padding: 2px 5px;
 }
 .WorkDiv {
   margin:10px 0;
@@ -42,6 +46,17 @@ body {
 }
 .ProjectDiv .Date {
   font-weight:bold;
+}
+
+#LanguagesDiv ul {
+    color:#888;
+    font-size: 14px;
+}
+#LanguagesDiv strong {
+    font-weight: 900;
+}
+#NotableWorkDiv li {
+    margin: 20px 0 0 10px;
 }
 </style>
 
@@ -63,8 +78,8 @@ body {
 <p>
   I'm a driven person who enjoys solving problems through programming.
   I develop many types of software, from low level operating systems to high level web applications.
-  Over the last 10 years I've worked as a software engineer at HP.
-  I program both for my job and as a hobby which has allowed me to gain experience in many areas.
+  Over the last 11 years I've worked as a software engineer at HP.
+  I program both for my job and as a hobby which provides me experience in many areas.
   I enjoy new challenges and love to learn.
 </p>
 
@@ -82,7 +97,7 @@ Graduation Date: May, 2010 GPA: 3.9<br/>
 <h2>JOBS</h2><br/>
 
 <div class="WorkDiv">
-(2010 - Present) 9 Years as a Software Engineer at HP. <br/>
+(2010 - Present) 11 Years as a Software Engineer at HP. <br/>
 Worked on a vast array of projects including low level drivers, operating system infrastructure, the USB stack, the msbuild system, databases, interactive web sites with JQuery/ASP.Net/PHP etc., and a large set of .NET tools.
 </div>
 <div class="WorkDiv">
@@ -96,13 +111,17 @@ I also do contract work that includes:
   <li>Server maintenance and configuration.  I've put together and configured servers for to host a few large websites/android apps</li>
 </div>
 
-<br/><h2>LANGUAGES</h2><br/>
+<br/>
+<div id="LanguagesDiv">
+
+<h2>LANGUAGES</h2><br/>
 <table class="TableStyle1">
   <tr><th>Name</th><th>Proficiency</th></tr>
-  <tr><td>C#</td><td>Very High</td></tr>
   <tr><td>C</td><td>Very High</td></tr>
+  <tr><td>C#</td><td>Very High</td></tr>
   <tr><td>D</td><td>Very High</td></tr>
   <tr><td>HTML/CSS</td><td>Very High</td></tr>
+  <tr><td>Zig</td><td>Very High</td></tr>
   <tr><td>C++</td><td>High</td></tr>
   <tr><td>Java</td><td>High</td></tr>
   <tr><td>PHP</td><td>High</td></tr>
@@ -115,27 +134,29 @@ I also do contract work that includes:
   <tr><td>Perl</td><td>Low</td></tr>
   <tr><td>Ruby</td><td>Low</td></tr>
   <tr><td>R</td><td>Low</td></tr>
-  <tr><td>Zig</td><td>Low</td></tr>
 </table>
 <ul>
- <li>Low: Spent some time programming in the language.  Have likely coded some small projects in the language but would need to brush up on the standard libraries.</li>
- <li>Medium: Dozens of hours spent with this language.</li>
- <li>High: Hundreds of hours of programming experience.  Likely had to use advanced techniques of the language to
+ <li><strong>Low:</strong> Spent some time programming in the language.  Have likely coded some small projects in the language but would need to brush up on the standard libraries.</li>
+ <li><strong>Medium</strong>: Dozens of hours spent with this language.</li>
+ <li><strong>High</strong>: Hundreds of hours of programming experience.  Likely had to use advanced techniques of the language to
      interoperate with other languages, interface with different operating systems, etc.</li>
- <li>Very High: Thousands of hours of programming experience. A very deep knowledge of the language. A good amount of knowledge of the compiler as well.</li>
+ <li><strong>Very High</strong>: Thousands of hours of programming experience. A very deep knowledge of the language. A good amount of knowledge of the compiler as well.</li>
 </ul>
+
+</div> <!-- LanguagesDiv -->
 
 <br/><hr/></br>
 
+<div id="NotableWorkDiv">
 <h2>NOTABLE WORK</h2><br/>
 
-I've tried to include at least 1 project in each general area that I've worked in. I provide more detail for projects that span more areas.  Some of my work can also be viewed on my github profile: <a href="https://github.com/marler8997">https://github.com/marler8997</a>
+I've tried to include at least 1 project in each general area that I've worked in. I provide more detail for projects that span more areas.  Some of my open source work can also be viewed on my github profile: <a href="https://github.com/marler8997">https://github.com/marler8997</a>
 
 <br/><br/>
 
 <li>I was the primary developer in creating and maintaining HP's linux distrubtion for our new enterprise firmware. HP chose to use the extensive and powerful Yocto framework to create our distrubtion. I received training for Yocto from bootlin and spent hundreds of hours developing and maintaining a full linux distribution with it.</li>
 <li>I developed a small linux distribution.  <a href="https://github.com/marler8997/maros">https://github.com/marler8997/maros</a> and <a href="https://github.com/marler8997/mar">https://github.com/marler8997/mar</a>  The purpose was to familiarize myself with linux at the kernel interface level.  It also provides a fast development platform for kernel modules. This also included writing an x86-64 bootloader <a href="https://github.com/marler8997/crystal">https://github.com/marler8997/crystal</a></li>
-<li>Windows CE?</li>
+<li>At HP before we switched to linux I helped maintain an instance of Windows CE for our enterprise printers.  This involved writing drivers, triaging issues with the OS and maintaining a transparent multi-stack network architecture.</li>
 <li>At HP our printers had a unique network architecture.  It contained 3 network stacks which presented some challenges.  To help accomodate this pre-existing design, I developed a tool called "MultiStackProxy".  This tool was able to facilitate proxying data between network stacks through simple commands and configuration.  It ran in the "application" layer and thus I created a general-purpose framework for creating asynchronous network applications on our old Windows CE operating system.  Because of this, we were able to leverage it so solve other problems as well.  I added an HTTP file server, a SOCKSv4 and SOCKSv5 proxy server and a custom protocol server used for authentication between processors.  With the framework I designed, these extra protocols were able to be implemented an a few hundred lines of code.  The framework encapsulated the threading model from the application code so we could run it in as little or as many threads as we needed.</li>
 <li>A linux block device driver that communicates with a server running on Windows that allows linux to share a Disk with another processor on the same ASIC. Unlike a remote file-system, this protocol never transferred actual disk data between processors.  Instead, the client would only send DMA lists which meant that performance was almost as good has having exclusive access to its own disk. This enabled HP printers to be able to run Android on a secondary processor and share the disk with our existing Windows CE operating system. This meant we didn't need to ship an extra disk to support Android and we still maintained high performance disk speed on an embedded device.</li>
 <li>Developed many tools and framework in order to build and run Android on our printers. This included implementing runtime block device verification "dmverity", image signing,  image verification inside EFI, a linux module that forwards open ports from Android to Windows in order for Windows to be able to forward communication from the external network interface to Android, and developing a SOCKS proxy server that runs on Windows CE (This is the Socks Proxy server that I added to MultiStackProxy).</li>
@@ -146,6 +167,8 @@ I've tried to include at least 1 project in each general area that I've worked i
 <li>Developed a simulator for finisher devices for HP printers.  This device uses a protocol to communicate with the printer to manage paper handling and finishing options in real-time.  The simulator supported dozens of finisher products and configurations.  It was a year-long effort to develop, with the final product being about 80,000 lines of code. I was the sole developer.  It's been used for about 6 years and the number of bugs found in it can be represented with a single digit.</li>
 <li>Developed a replacement for Windows networking library (ws2_32.dll) that allowed applications to interact with multiple network stack without being aware of it.  This piece of software is crucial in HP enterprise products to support both internal Windows networking and the external-facing Jetdirect network stack.</li>
 <li>I've created a handful of websites for businesses and friends.  For these I mainly use HTML/D/Javascript/PHP/C/C++/SQL.</li>
+
+</div><!-- NotableWorkDiv -->
 
 <!--
 var projects = [{
