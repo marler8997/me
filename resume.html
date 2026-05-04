@@ -74,7 +74,7 @@ body {
 
 <div id="ContentDiv">
 
-<h2>ABOUT ME</h2>
+<h2>About Me</h2>
 <p>
   I'm a driven engineer who enjoys solving problems through programming.
   I develop many types of software, from low-level operating systems to high-level web applications.
@@ -82,15 +82,6 @@ body {
   Outside of work I contribute extensively to open source: over <strong>500,000 lines of code across 166 repositories in 2024-2026</strong>. Popular tools I've created include <a href="https://github.com/marler8997/zigup">zigup</a> (1.1K&nbsp;★), <a href="https://github.com/marler8997/anyzig">anyzig</a> (388&nbsp;★), <a href="https://github.com/marler8997/msvcup">msvcup</a> (348&nbsp;★, blog post hit #1 on Hacker News), and <a href="https://github.com/marlersoft/zigwin32">zigwin32</a> (referenced from the official microsoft/win32metadata repository).
   I enjoy new challenges and love to learn.
 </p>
-
-<br/><hr/><br/><br/>
-
-<h2>SCHOOL</h2><br/>
-
-<strong>University of Idaho</strong><br/>
-College of Science and College of Engineering<br/>
-BS General Mathematics and BS Computer Science<br/>
-Graduation Date: May, 2010 GPA: 3.9<br/>
 
 <br/><hr/><br/><br/>
 
@@ -105,7 +96,7 @@ Graduation Date: May, 2010 GPA: 3.9<br/>
 
 <br/><hr/><br/><br/>
 
-<h2>JOBS</h2><br/>
+<h2>Jobs</h2><br/>
 
 <div class="WorkDiv">
 (2021 - Present) Software Engineer at <a href="https://tuple.app">Tuple</a><br/><br/>
@@ -115,7 +106,7 @@ Solo developer of the Windows and Linux ports of the Tuple remote pair-programmi
 <br/><br/>
 <strong>Tech stack (Windows):</strong> C++20 native (x86_64 and arm64) built with MSVC + CMake + Ninja, plus a custom-built fork of WebRTC. Rendering and text via Direct2D / DirectWrite / WIC. Direct3D 10/11 with custom HLSL shaders for GPU RGB&rarr;NV12/I420 conversion. Three interchangeable screen-capture backends (DXGI Desktop Duplication, Windows Graphics Capture, GDI fallback) selected per-monitor and per-OS-version. Webcam capture via Media Foundation. Audio I/O via WASAPI + miniaudio with RNNoise (noise suppression) and whisper.cpp (transcription), built via Zig. Transport via libwebrtc m121 (custom build). Embedded UI via WebView2. COM/RAII via Microsoft WIL. Crash reporting via Sentry + Crashpad. Animations via rlottie. UI is hand-rolled Win32 (HWND-per-window with custom WndProcs, low-level keyboard/mouse hooks, systray, DPI / per-monitor text-scale aware).
 <br/><br/>
-<strong>Notable problems solved:</strong> "App Veil", allows the user to exclude applications from the screen share. Required deep win32 architecture knowledge, used dll injection via "global windows hooks" to monitor all windows on the system to securely make it impossible for these windows to be shared. Low-latency screen-capture pipeline. Global low-level keyboard/mouse hooks routed. Multi-monitor + high-DPI + per-monitor scaling across mixed displays; webcam device enumeration and hot-plug handling; WASAPI capture/render with chunking and device-change recovery; in-call annotation overlay (transparent click-through D2D window); auto-update with code-signing and a Crashpad symbol-upload pipeline.
+<strong>Notable problems solved:</strong> "App Veil", which lets users exclude specific applications from the screen share, required deep Win32 architecture knowledge. It's implemented via DLL injection and global Windows hooks that monitor every window on the system and prevent excluded ones from being captured. The screen-capture pipeline uses three swappable backends (DXGI Desktop Duplication, Windows Graphics Capture, GDI fallback) selected per-monitor and per-OS-version. Remote-control input injection uses batched SendInput with differential modifier-state replay and an ALT-key double-tap focus workaround. Other Win32 work includes global low-level keyboard/mouse hooks routed cross-thread via PostMessage, multi-monitor and per-monitor DPI/text-scale handling across mixed displays, and WASAPI device-change recovery.
 </div>
 <div class="WorkDiv">
 (2010 - 2021) Software Engineer at HP<br/><br/>
@@ -130,21 +121,13 @@ I also do contract work that includes:
 <ul>
   <li>Creating websites.  I've created websites using HTML, CSS, Javascript, PHP, ASP.NET, D/vibe.d, C/C++, Perl, Ruby, and other scripting languages.  I'm also familair with Microsoft SQL Server, MySQL, and PostgresSQL.</li>
   <li>Server maintenance and configuration.  I've put together and configured servers for to host a few large websites/android apps</li>
+</ul>
 </div>
 
-<br/>
-<div id="LanguagesDiv">
-
-<h2>LANGUAGES</h2><br/>
-
-<p>Over the years I've contributed to hundreds of projects in dozens of languages.  I prefer to work in whatever language is "native" to the platform I'm on, whether that be C/C++/Zig on bare metal, or JavaScript in the Browser. Here's a list of some of those languages: C, C++, C#, D, Zig, Python, JavaScript, HTML/CSS, Java, PHP, LISP, Bash, Perl, Ruby, R, ASPX, Batch.</p>
-
-</div> <!-- LanguagesDiv -->
-
-<br/><hr/></br>
+<br/><hr/><br/><br/>
 
 <div id="NotableWorkDiv">
-<h2>NOTABLE WORK</h2><br/>
+<h2>Notable Work</h2><br/>
 
 I've tried to include at least 1 project in each general area that I've worked in. I provide more detail for projects that span more areas.  Some of my open source work can also be viewed on my github profile: <a href="https://github.com/marler8997">https://github.com/marler8997</a>
 
@@ -207,7 +190,7 @@ I've tried to include at least 1 project in each general area that I've worked i
   <li>Zig HTTP Client: <a href="https://github.com/marler8997/ziget">https://github.com/marler8997/ziget</a></li>
   <li>Audio synthesis application/tools: <a href="https://github.com/marler8997/audio">https://github.com/marler8997/audio</a></li>
   <li>Netpunch, networking tools/libraries: <a href="https://github.com/marler8997/netpunch">https://github.com/marler8997/netpunch</a></li>
-  <li>A re-implementation of the "slime volleyball" Java game in HTML5/Javascript: <a href="https://github.com/marler8997/SlimeJavascript">https://github.com/marler8997/SlimeJavascript<a></li>
+  <li>A re-implementation of the "slime volleyball" Java game in HTML5/Javascript: <a href="https://github.com/marler8997/SlimeJavascript">https://github.com/marler8997/SlimeJavascript</a></li>
   <li>Irc Logging Client/Publisher: <a href="https://github.com/marler8997/zig-irc-logger">https://github.com/marler8997/zig-irc-logger</a></li>
   <li>X11 library for Zig: <a href="https://github.com/marler8997/zigx">https://github.com/marler8997/zigx</a></li>
   <li>Experimental scripting language: <a href="https://github.com/stitchlang/stitch">https://github.com/stitchlang/stitch</a></li>
@@ -215,6 +198,25 @@ I've tried to include at least 1 project in each general area that I've worked i
   <li>Play synchronized streaming content accross multiple clients: <a href="https://github.com/marler8997/streamshare">https://github.com/marler8997/streamshare</a></li>
   <li>Command-Line Disk Imaging tool for Windows: <a href="https://github.com/marler8997/windows-imager">https://github.com/marler8997/windows-imager</a></li>
 </div>
+
+<br/><hr/><br/><br/>
+
+<div id="LanguagesDiv">
+
+<h2>Languages</h2><br/>
+
+<p>Over the years I've contributed to hundreds of projects in dozens of languages.  I prefer to work in whatever language is "native" to the platform I'm on, whether that be C/C++/Zig on bare metal, or JavaScript in the Browser. Here's a list of some of those languages: C, C++, C#, D, Zig, Python, JavaScript, HTML/CSS, Java, PHP, LISP, Bash, Perl, Ruby, R, ASPX, Batch.</p>
+
+</div> <!-- LanguagesDiv -->
+
+<br/><hr/><br/><br/>
+
+<h2>School</h2><br/>
+
+<strong>University of Idaho</strong><br/>
+College of Science and College of Engineering<br/>
+BS General Mathematics and BS Computer Science<br/>
+Graduation Date: May, 2010 GPA: 3.9<br/>
 
 
 <!--
