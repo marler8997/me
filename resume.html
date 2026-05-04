@@ -195,7 +195,7 @@ ul.bulleted li {
   <img src="http://www.gravatar.com/avatar/c0f590ac097341cb2e416ef7903cf69e?s=200" alt="Jonathan Marler">
   <div class="header-info">
     <h1>Jonathan Marler</h1>
-    <div class="role">Software Engineer</div>
+    <div class="role">Senior Software Engineer</div>
     <div class="email"><a href="mailto:johnnymarler@gmail.com">johnnymarler@gmail.com</a></div>
   </div>
 </header>
@@ -208,6 +208,7 @@ ul.bulleted li {
   Outside of work I contribute extensively to open source: over <strong>500,000 lines of code across 166 repositories in 2024-2026</strong>. Popular tools I've created include <a href="https://github.com/marler8997/zigup">zigup</a> (1.1K&nbsp;★), <a href="https://github.com/marler8997/anyzig">anyzig</a> (388&nbsp;★), <a href="https://github.com/marler8997/msvcup">msvcup</a> (348&nbsp;★, blog post hit #1 on Hacker News), and <a href="https://github.com/marlersoft/zigwin32">zigwin32</a> (referenced from the official microsoft/win32metadata repository).
   I enjoy new challenges and love to learn.
 </p>
+<p><strong>Currently looking for Lead Engineer roles building Windows and/or Linux desktop applications.</strong></p>
 
 <h2>Media</h2>
 <ul class="dated">
@@ -222,8 +223,8 @@ ul.bulleted li {
 <h2>Jobs</h2>
 
 <div class="job">
-  <div class="job-meta">2021 &ndash; Present</div>
-  <div class="job-title">Software Engineer at <a href="https://tuple.app">Tuple</a></div>
+  <div class="job-meta">5 Years (2021 &ndash; Present)</div>
+  <div class="job-title">Lead developer for Windows/Linux apps at <a href="https://tuple.app">Tuple</a></div>
   <p>Solo developer of the Windows and Linux ports of the Tuple remote pair-programming application (originally macOS-only). Built the Windows port from scratch starting March 2023; it now has hundreds of weekly active users and a very low bug-report rate. ~64K lines of C/C++ across ~250 source files and ~1,366 commits.</p>
   <p><strong>End-to-end ownership.</strong> I own everything required to ship the app, not just the application code: CI and build orchestration, the installer, code signing, the auto-update mechanism, crash reporting and symbol upload (Sentry + Crashpad), testing, and ongoing maintenance and triage.</p>
   <p><strong>Tech stack (Windows):</strong> C++20 native (x86_64 and arm64) built with MSVC + CMake + Ninja, plus a custom-built fork of WebRTC. Rendering and text via Direct2D / DirectWrite / WIC. Direct3D 10/11 with custom HLSL shaders for GPU RGB&rarr;NV12/I420 conversion. Three interchangeable screen-capture backends (DXGI Desktop Duplication, Windows Graphics Capture, GDI fallback) selected per-monitor and per-OS-version. Webcam capture via Media Foundation. Audio I/O via WASAPI + miniaudio with RNNoise (noise suppression) and whisper.cpp (transcription), built via Zig. Transport via libwebrtc m121 (custom build). Embedded UI via WebView2. COM/RAII via Microsoft WIL. Crash reporting via Sentry + Crashpad. Animations via rlottie. UI is hand-rolled Win32 (HWND-per-window with custom WndProcs, low-level keyboard/mouse hooks, systray, DPI / per-monitor text-scale aware).</p>
@@ -231,7 +232,7 @@ ul.bulleted li {
 </div>
 
 <div class="job">
-  <div class="job-meta">2010 &ndash; 2021</div>
+  <div class="job-meta">11 Years (2010 &ndash; 2021)</div>
   <div class="job-title">Software Engineer at HP</div>
   <p>11 years across HP's enterprise printer firmware, spanning low-level systems (drivers, USB stack, bootloaders, networking) up through .NET tooling, internal web services, and build infrastructure. Sole or primary developer on most of the work below.</p>
   <p><strong>Linux infrastructure.</strong> Primary developer of HP's Linux distribution for enterprise printer firmware, built on Yocto (received Yocto training from bootlin). Wrote a Linux block device driver that lets Linux share a disk with another processor on the same ASIC by sending DMA lists rather than data, with performance close to native. Built the tooling to run Android on printers: runtime dm-verity, image signing, EFI image verification, a port-forwarding kernel module, and a SOCKS proxy server on Windows CE.</p>
@@ -241,17 +242,9 @@ ul.bulleted li {
 </div>
 
 <div class="job">
-  <div class="job-meta">2008 &ndash; 2010</div>
+  <div class="job-meta">2 Years (2008 &ndash; 2010)</div>
   <div class="job-title">Internship at University of Idaho</div>
   <p>Worked on code analysis software written in LISP (ACL2). This was for professor James Alves Foss who was writing static code analysis software for Wind River.</p>
-</div>
-
-<div class="job">
-  <div class="job-title">Contract work</div>
-  <ul>
-    <li>Creating websites. I've created websites using HTML, CSS, Javascript, PHP, ASP.NET, D/vibe.d, C/C++, Perl, Ruby, and other scripting languages. I'm also familiar with Microsoft SQL Server, MySQL, and PostgresSQL.</li>
-    <li>Server maintenance and configuration. I've put together and configured servers to host a few large websites and Android apps.</li>
-  </ul>
 </div>
 
 <h2>Notable Work</h2>
